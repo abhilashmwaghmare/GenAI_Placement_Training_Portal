@@ -2,6 +2,9 @@
   const app = document.getElementById('app');
   if (!app) return;
   const base = './assets/';
+  const style = document.createElement('style');
+  style.textContent = '.resource-link{display:inline-block!important;text-decoration:none;margin-top:12px}.screenshot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.shot{display:block;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:10px;color:inherit;text-decoration:none;box-shadow:0 8px 25px #0000000b}.shot img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:9px;background:#f3f4f6}.shot b{display:block;margin:12px 4px 4px}.shot span{display:block;margin:0 4px 5px;color:#667085;font-size:12px}@media(max-width:900px){.screenshot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.screenshot-grid{grid-template-columns:1fr}}';
+  document.head.appendChild(style);
   const html = `
   <section class="page-head"><span class="tag">PLACEMENT RESOURCES</span><h2>GenAI Career Profile & Sample Library</h2><p>CloudBlitz training references for resumes, Naukri and LinkedIn. These are sample profiles with placeholder contact details; students should replace them with truthful information.</p></section>
   <div class="resource-grid">
@@ -10,8 +13,7 @@
     <article><span class="resource-icon">N</span><b>NAUKRI PROFILE</b><h3>Sample Naukri Profile</h3><p>Profile headline, key skills, summary, projects, preferences and completion example.</p><a class="primary resource-link" href="${base}profiles/naukri-sample.html" target="_blank">Open Naukri Sample →</a></article>
     <article><span class="resource-icon">in</span><b>LINKEDIN PROFILE</b><h3>Sample LinkedIn Profile</h3><p>Headline, About, Experience, Featured, Skills and profile checklist for a GenAI candidate.</p><a class="primary resource-link" href="${base}profiles/linkedin-sample.html" target="_blank">Open LinkedIn Sample →</a></article>
   </div>
-  <section class="section"><div class="section-head"><div><span class="eyebrow">SCREENSHOT REFERENCE LIBRARY</span><h3>Sample Naukri & LinkedIn Screenshots</h3><p>Use these mock screenshots as visual references while students complete their real profiles.</p></div></div>
-  <div class="screenshot-grid">
+  <section class="section"><div class="section-head"><div><span class="eyebrow">SCREENSHOT REFERENCE LIBRARY</span><h3>Sample Naukri & LinkedIn Screenshots</h3><p>Use these mock screenshots as visual references while students complete their real profiles.</p></div></div><div class="screenshot-grid">
     <a class="shot" href="${base}screenshots/naukri-header.svg" target="_blank"><img src="${base}screenshots/naukri-header.svg" alt="Sample Naukri profile header"><b>Naukri · Profile Header</b><span>Headline · location · completion</span></a>
     <a class="shot" href="${base}screenshots/naukri-skills.svg" target="_blank"><img src="${base}screenshots/naukri-skills.svg" alt="Sample Naukri skills"><b>Naukri · Key Skills</b><span>GenAI keyword skills</span></a>
     <a class="shot" href="${base}screenshots/naukri-projects.svg" target="_blank"><img src="${base}screenshots/naukri-projects.svg" alt="Sample Naukri projects"><b>Naukri · Projects</b><span>Project descriptions</span></a>
