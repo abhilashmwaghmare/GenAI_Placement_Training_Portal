@@ -18,12 +18,7 @@ A standalone, responsive learning portal for GenAI placement readiness, trainer-
 
 Open `index.html` in a browser. All site assets are plain static files.
 
-## Publish using GitHub Pages
 
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select branch **main** and folder **/ (root)**, then save.
-4. After GitHub finishes publishing, the site should be available at:
 
    `https://abhilashmwaghmare.github.io/GenAI_Placement_Training_Portal/`
 
